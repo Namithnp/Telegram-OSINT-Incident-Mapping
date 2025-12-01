@@ -1,0 +1,18 @@
+﻿\
+# Ignore environment variables
+.env
+
+# Ignore Pyrogram session files
+*my_account.session 
+*my_account.session-journal 
+
+# Ignore Python cache & temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+env/
+

@@ -1,0 +1,13 @@
+pyrogram
+tgcrypto
+python-dotenv
+googlemaps
+google-generativeai
+google-ai-python
+google-adk
+pandas
+geopandas
+contextily
+folium
+shapely
+matplotlib

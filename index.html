@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fabc1f16c5b13b4958382a75be529664 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-dvf/0.3.0/leaflet-dvf.markers.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        z-index: 9999;
+        background-color: rgba(0,0,0,0.7);
+        padding: 8px 12px;
+        border-radius: 6px;
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 1.4;
+    ">
+      <b>Map key</b><br>
+      <div style="margin-top:4px;">
+        <span style="color:#ff6b6b;">●</span> Kinetic violence<br>
+        <span style="color:#4cc9f0;">■</span> Security / law enforcement<br>
+        <span style="color:#ffd93b;">▲</span> Civilian impact / disasters<br>
+      </div>
+    </div>
+    
+    
+            <div class="folium-map" id="map_fabc1f16c5b13b4958382a75be529664" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fabc1f16c5b13b4958382a75be529664 = L.map(
+                "map_fabc1f16c5b13b4958382a75be529664",
+                {
+                    center: [29.289687448888884, 58.48285013555556],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_fabc1f16c5b13b4958382a75be529664);
+
+            
+
+        
+    
+            var tile_layer_c85d2092cf39d77838d4a2d166a2afce = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c85d2092cf39d77838d4a2d166a2afce.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_d9c14856ef9cf93272a7ad44135ccf1e = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var regular_polygon_marker_149fd4b868961e54aa669e4f64585efe = new L.RegularPolygonMarker(
+                [25.7521467, 71.3966865],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_d9c14856ef9cf93272a7ad44135ccf1e);
+        
+    
+        var popup_025ecbc683055f975dc80f15bccde16f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_53865d0cc3f20d8087b03cadbbd5a453 = $(`<div id="html_53865d0cc3f20d8087b03cadbbd5a453" style="width: 100.0%; height: 100.0%;">arrest_detention — Barmer, Rajasthan</div>`)[0];
+                popup_025ecbc683055f975dc80f15bccde16f.setContent(html_53865d0cc3f20d8087b03cadbbd5a453);
+            
+        
+
+        regular_polygon_marker_149fd4b868961e54aa669e4f64585efe.bindPopup(popup_025ecbc683055f975dc80f15bccde16f)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_30559f317778ce77812321ebcef57b68 = new L.RegularPolygonMarker(
+                [32.7103768, 74.9062622],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_d9c14856ef9cf93272a7ad44135ccf1e);
+        
+    
+        var popup_44617b02fb7da68ab11c5e2abc4a001c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1adb136ca90f39fb6c1df34b1f328afd = $(`<div id="html_1adb136ca90f39fb6c1df34b1f328afd" style="width: 100.0%; height: 100.0%;">arrest_detention — Bathindi, Jammu</div>`)[0];
+                popup_44617b02fb7da68ab11c5e2abc4a001c.setContent(html_1adb136ca90f39fb6c1df34b1f328afd);
+            
+        
+
+        regular_polygon_marker_30559f317778ce77812321ebcef57b68.bindPopup(popup_44617b02fb7da68ab11c5e2abc4a001c)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_c1c6dc92aa93a5c0df346b8d8193f25e = new L.RegularPolygonMarker(
+                [28.1023894, 76.99310740000001],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_d9c14856ef9cf93272a7ad44135ccf1e);
+        
+    
+        var popup_80cd3e9efb3ce2329164061c3b13fcc2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd322200ac0ec88663bfdb3a5e2c04ea = $(`<div id="html_dd322200ac0ec88663bfdb3a5e2c04ea" style="width: 100.0%; height: 100.0%;">arrest_detention — Nuh, Haryana</div>`)[0];
+                popup_80cd3e9efb3ce2329164061c3b13fcc2.setContent(html_dd322200ac0ec88663bfdb3a5e2c04ea);
+            
+        
+
+        regular_polygon_marker_c1c6dc92aa93a5c0df346b8d8193f25e.bindPopup(popup_80cd3e9efb3ce2329164061c3b13fcc2)
+        ;
+
+        
+    
+    
+            feature_group_d9c14856ef9cf93272a7ad44135ccf1e.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_c5b192747ecb10385939c5b86d87257d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_9cf6e2ceff1883d9e990bd759fe5f140 = L.circleMarker(
+                [32.9909945, 70.645473],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_c26eafe912bf59726457cb4725f9c105 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6ca8ae75ecb5006617188e33330c9154 = $(`<div id="html_6ca8ae75ecb5006617188e33330c9154" style="width: 100.0%; height: 100.0%;">attack — Bannu</div>`)[0];
+                popup_c26eafe912bf59726457cb4725f9c105.setContent(html_6ca8ae75ecb5006617188e33330c9154);
+            
+        
+
+        circle_marker_9cf6e2ceff1883d9e990bd759fe5f140.bindPopup(popup_c26eafe912bf59726457cb4725f9c105)
+        ;
+
+        
+    
+    
+            var circle_marker_cfe9d4a8c5e390ff817eb3568080340b = L.circleMarker(
+                [34.00833739999999, 71.5188619],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_a432f86ae55a477218df6ece88456d98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b354f083bfb00c079010d63ec0404f07 = $(`<div id="html_b354f083bfb00c079010d63ec0404f07" style="width: 100.0%; height: 100.0%;">attack — Peshawar, Khyber Pakhtunkhwa, Pakistan</div>`)[0];
+                popup_a432f86ae55a477218df6ece88456d98.setContent(html_b354f083bfb00c079010d63ec0404f07);
+            
+        
+
+        circle_marker_cfe9d4a8c5e390ff817eb3568080340b.bindPopup(popup_a432f86ae55a477218df6ece88456d98)
+        ;
+
+        
+    
+    
+            var circle_marker_759ce29d262ab56f7088d4303d8fb1e3 = L.circleMarker(
+                [32.9909945, 70.645473],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_5e1617b6a7a08db8424e63f02d87fa32 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2b34ac56102172167cc68667fb361da = $(`<div id="html_d2b34ac56102172167cc68667fb361da" style="width: 100.0%; height: 100.0%;">attack — Bannu, Khyber Pakhtunkhwa</div>`)[0];
+                popup_5e1617b6a7a08db8424e63f02d87fa32.setContent(html_d2b34ac56102172167cc68667fb361da);
+            
+        
+
+        circle_marker_759ce29d262ab56f7088d4303d8fb1e3.bindPopup(popup_5e1617b6a7a08db8424e63f02d87fa32)
+        ;
+
+        
+    
+    
+            var circle_marker_3cd3e26f899f4f2c7b576db16f4bb96f = L.circleMarker(
+                [26.970599, 64.08868],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_d2395b21017cf84153ae2f28d0aaabfe = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eac247ec852c14e01b65b4dd47a9ae82 = $(`<div id="html_eac247ec852c14e01b65b4dd47a9ae82" style="width: 100.0%; height: 100.0%;">attack — Panjgur</div>`)[0];
+                popup_d2395b21017cf84153ae2f28d0aaabfe.setContent(html_eac247ec852c14e01b65b4dd47a9ae82);
+            
+        
+
+        circle_marker_3cd3e26f899f4f2c7b576db16f4bb96f.bindPopup(popup_d2395b21017cf84153ae2f28d0aaabfe)
+        ;
+
+        
+    
+    
+            var circle_marker_5cbf5f1a376500c606a0805d65af0bec = L.circleMarker(
+                [24.4189048, 94.19234000000002],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_02e03a7bc73060814f9eefbe1c9bebfb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9721bd358cd625fde1fdd6592316d842 = $(`<div id="html_9721bd358cd625fde1fdd6592316d842" style="width: 100.0%; height: 100.0%;">attack — Tengnoupal district, Manipur, India</div>`)[0];
+                popup_02e03a7bc73060814f9eefbe1c9bebfb.setContent(html_9721bd358cd625fde1fdd6592316d842);
+            
+        
+
+        circle_marker_5cbf5f1a376500c606a0805d65af0bec.bindPopup(popup_02e03a7bc73060814f9eefbe1c9bebfb)
+        ;
+
+        
+    
+    
+            var circle_marker_e1950d87e2c78f321ed77fb730b59c62 = L.circleMarker(
+                [24.3869025, 94.14756229999999],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_c9db4e65aff73949a5e65c68d55f3f0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6a80b32ee4bf9d75bed4dd9f5bc7defe = $(`<div id="html_6a80b32ee4bf9d75bed4dd9f5bc7defe" style="width: 100.0%; height: 100.0%;">attack — Tengnoupal, Manipur</div>`)[0];
+                popup_c9db4e65aff73949a5e65c68d55f3f0c.setContent(html_6a80b32ee4bf9d75bed4dd9f5bc7defe);
+            
+        
+
+        circle_marker_e1950d87e2c78f321ed77fb730b59c62.bindPopup(popup_c9db4e65aff73949a5e65c68d55f3f0c)
+        ;
+
+        
+    
+    
+            var circle_marker_b2870849e4ce7fa5e7d87ad0d6557fe4 = L.circleMarker(
+                [33.9921659, 71.4982052],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_6ebfa1fbb752cfb0e5f2f7743335c90d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_780e753da55dba237bf3b83175cd4569 = $(`<div id="html_780e753da55dba237bf3b83175cd4569" style="width: 100.0%; height: 100.0%;">attack — University Town, Pakistan</div>`)[0];
+                popup_6ebfa1fbb752cfb0e5f2f7743335c90d.setContent(html_780e753da55dba237bf3b83175cd4569);
+            
+        
+
+        circle_marker_b2870849e4ce7fa5e7d87ad0d6557fe4.bindPopup(popup_6ebfa1fbb752cfb0e5f2f7743335c90d)
+        ;
+
+        
+    
+    
+            var circle_marker_3b5c5d3eb349c94661b63692d613d6f4 = L.circleMarker(
+                [33.3100546, 35.9182096],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_1575ea3d9ebf6a365821118a2ab95cc8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d669a2eb04893e593f5d8569bd701f8d = $(`<div id="html_d669a2eb04893e593f5d8569bd701f8d" style="width: 100.0%; height: 100.0%;">attack — Beit Jinn, Damascus, Syria</div>`)[0];
+                popup_1575ea3d9ebf6a365821118a2ab95cc8.setContent(html_d669a2eb04893e593f5d8569bd701f8d);
+            
+        
+
+        circle_marker_3b5c5d3eb349c94661b63692d613d6f4.bindPopup(popup_1575ea3d9ebf6a365821118a2ab95cc8)
+        ;
+
+        
+    
+    
+            var circle_marker_d60a966fc0fda8bb7b5e795666c460ef = L.circleMarker(
+                [33.0215833, 70.7528355],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_dcc5ee4f5fcd94723fb001d566973c71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3566aadfe9a0748956a124fcff09d1d0 = $(`<div id="html_3566aadfe9a0748956a124fcff09d1d0" style="width: 100.0%; height: 100.0%;">attack — Domail Ahmadzai, Bannu</div>`)[0];
+                popup_dcc5ee4f5fcd94723fb001d566973c71.setContent(html_3566aadfe9a0748956a124fcff09d1d0);
+            
+        
+
+        circle_marker_d60a966fc0fda8bb7b5e795666c460ef.bindPopup(popup_dcc5ee4f5fcd94723fb001d566973c71)
+        ;
+
+        
+    
+    
+            var circle_marker_3e56c8eed8f7600068b5c1377ab43022 = L.circleMarker(
+                [8.9793547, 49.6911374],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_d347990c9f3394d7cc4bd6f3c996a33a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_552308919d0a952e37eef3b22a6cb796 = $(`<div id="html_552308919d0a952e37eef3b22a6cb796" style="width: 100.0%; height: 100.0%;">attack — Baalade Valley, Puntland, Somalia</div>`)[0];
+                popup_d347990c9f3394d7cc4bd6f3c996a33a.setContent(html_552308919d0a952e37eef3b22a6cb796);
+            
+        
+
+        circle_marker_3e56c8eed8f7600068b5c1377ab43022.bindPopup(popup_d347990c9f3394d7cc4bd6f3c996a33a)
+        ;
+
+        
+    
+    
+            var circle_marker_d7c7f3b6de88f3b311081f091416eeb7 = L.circleMarker(
+                [38.8976763, -77.0365298],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_b63736de475b0dc1118af6b430b8499c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5ba5e30525c38c5e1ff13c670635774 = $(`<div id="html_a5ba5e30525c38c5e1ff13c670635774" style="width: 100.0%; height: 100.0%;">attack — White House</div>`)[0];
+                popup_b63736de475b0dc1118af6b430b8499c.setContent(html_a5ba5e30525c38c5e1ff13c670635774);
+            
+        
+
+        circle_marker_d7c7f3b6de88f3b311081f091416eeb7.bindPopup(popup_b63736de475b0dc1118af6b430b8499c)
+        ;
+
+        
+    
+    
+            var circle_marker_d009af972f0f45ceae2d8f4cb670e726 = L.circleMarker(
+                [38.9071923, -77.0368707],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_a94e7057910c0ccae0ac93b02826d3be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb2369e4ad5d3fc9387b428cd3b9b919 = $(`<div id="html_cb2369e4ad5d3fc9387b428cd3b9b919" style="width: 100.0%; height: 100.0%;">attack — Washington, DC</div>`)[0];
+                popup_a94e7057910c0ccae0ac93b02826d3be.setContent(html_cb2369e4ad5d3fc9387b428cd3b9b919);
+            
+        
+
+        circle_marker_d009af972f0f45ceae2d8f4cb670e726.bindPopup(popup_a94e7057910c0ccae0ac93b02826d3be)
+        ;
+
+        
+    
+    
+            var circle_marker_bfc483ae8c18b931109508771abbb0f7 = L.circleMarker(
+                [24.4714679, 94.3582917],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_ee170d629045db85d090a6bb51b5eb5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea4659c067c8a1bd3f22e425defe9ab1 = $(`<div id="html_ea4659c067c8a1bd3f22e425defe9ab1" style="width: 100.0%; height: 100.0%;">attack — Saibol, Tengnoupal district, Manipur, India</div>`)[0];
+                popup_ee170d629045db85d090a6bb51b5eb5c.setContent(html_ea4659c067c8a1bd3f22e425defe9ab1);
+            
+        
+
+        circle_marker_bfc483ae8c18b931109508771abbb0f7.bindPopup(popup_ee170d629045db85d090a6bb51b5eb5c)
+        ;
+
+        
+    
+    
+            var circle_marker_b4643cf5091bc33b4e9acc9d55c47eb0 = L.circleMarker(
+                [38.9071923, -77.0368707],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_2ffde821e8e54013ea96a24f3d305aaf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0616ce5e108d464e3b38d5cd524b3f97 = $(`<div id="html_0616ce5e108d464e3b38d5cd524b3f97" style="width: 100.0%; height: 100.0%;">attack — DC</div>`)[0];
+                popup_2ffde821e8e54013ea96a24f3d305aaf.setContent(html_0616ce5e108d464e3b38d5cd524b3f97);
+            
+        
+
+        circle_marker_b4643cf5091bc33b4e9acc9d55c47eb0.bindPopup(popup_2ffde821e8e54013ea96a24f3d305aaf)
+        ;
+
+        
+    
+    
+            var circle_marker_9df3b65840508263ebcf4b5eba4a952b = L.circleMarker(
+                [30.375321, 69.34511599999999],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_d21e770f2131c93a8bb4f13a0b062437 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb47a06a3fd221fb1d884a0584ded449 = $(`<div id="html_cb47a06a3fd221fb1d884a0584ded449" style="width: 100.0%; height: 100.0%;">attack — Pakistan</div>`)[0];
+                popup_d21e770f2131c93a8bb4f13a0b062437.setContent(html_cb47a06a3fd221fb1d884a0584ded449);
+            
+        
+
+        circle_marker_9df3b65840508263ebcf4b5eba4a952b.bindPopup(popup_d21e770f2131c93a8bb4f13a0b062437)
+        ;
+
+        
+    
+    
+            var circle_marker_4d160424f482017e9341680f82d6653c = L.circleMarker(
+                [34.80207499999999, 38.996815],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_eb45e4368072ce642c093dec90bd8878 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02a5b046b1205ed451ec86a9017a1d50 = $(`<div id="html_02a5b046b1205ed451ec86a9017a1d50" style="width: 100.0%; height: 100.0%;">attack — Syria</div>`)[0];
+                popup_eb45e4368072ce642c093dec90bd8878.setContent(html_02a5b046b1205ed451ec86a9017a1d50);
+            
+        
+
+        circle_marker_4d160424f482017e9341680f82d6653c.bindPopup(popup_eb45e4368072ce642c093dec90bd8878)
+        ;
+
+        
+    
+    
+            var circle_marker_6aad429290eed2159d52e221b0c543df = L.circleMarker(
+                [34.80207499999999, 38.996815],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_6436485836331d82b7a8ff2231f2ce1a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c85a04e3e7c5bf0cf3135362da638bb = $(`<div id="html_5c85a04e3e7c5bf0cf3135362da638bb" style="width: 100.0%; height: 100.0%;">attack — Syria</div>`)[0];
+                popup_6436485836331d82b7a8ff2231f2ce1a.setContent(html_5c85a04e3e7c5bf0cf3135362da638bb);
+            
+        
+
+        circle_marker_6aad429290eed2159d52e221b0c543df.bindPopup(popup_6436485836331d82b7a8ff2231f2ce1a)
+        ;
+
+        
+    
+    
+            var circle_marker_01857f21b4132ecb11a79dafd12e5ffd = L.circleMarker(
+                [29.79516499999999, 66.90349359999999],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_9a9069c26ecc66f064cdd931fd6cab9f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7694c04ca39f43ae105d61aac0ee75ab = $(`<div id="html_7694c04ca39f43ae105d61aac0ee75ab" style="width: 100.0%; height: 100.0%;">attack — Panjgur, Mastung</div>`)[0];
+                popup_9a9069c26ecc66f064cdd931fd6cab9f.setContent(html_7694c04ca39f43ae105d61aac0ee75ab);
+            
+        
+
+        circle_marker_01857f21b4132ecb11a79dafd12e5ffd.bindPopup(popup_9a9069c26ecc66f064cdd931fd6cab9f)
+        ;
+
+        
+    
+    
+            var circle_marker_240d182e2afe1f07a6e7ffa900bbe337 = L.circleMarker(
+                [38.9071923, -77.0368707],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_c5b192747ecb10385939c5b86d87257d);
+        
+    
+        var popup_320ed77edfc59be1227e6b56342f90c0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_13f5b31584f86719a3af9f137b5b064d = $(`<div id="html_13f5b31584f86719a3af9f137b5b064d" style="width: 100.0%; height: 100.0%;">attack — DC</div>`)[0];
+                popup_320ed77edfc59be1227e6b56342f90c0.setContent(html_13f5b31584f86719a3af9f137b5b064d);
+            
+        
+
+        circle_marker_240d182e2afe1f07a6e7ffa900bbe337.bindPopup(popup_320ed77edfc59be1227e6b56342f90c0)
+        ;
+
+        
+    
+    
+            feature_group_c5b192747ecb10385939c5b86d87257d.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_2d37a6f72c809a8aef93f2265b11107d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var regular_polygon_marker_74a3320cdcc0291e3a8ff33d20f44e53 = new L.RegularPolygonMarker(
+                [34.1515173, 71.5723953],
+                {
+  "stroke": true,
+  "color": "#ffd93b",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#ffd93b",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 3,
+  "rotation": 30,
+}
+            ).addTo(feature_group_2d37a6f72c809a8aef93f2265b11107d);
+        
+    
+        var popup_e6e1edf0709e38e3eab5d1a5130dcec0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e1d9a583fd263ca46bd60c1a8da71ee5 = $(`<div id="html_e1d9a583fd263ca46bd60c1a8da71ee5" style="width: 100.0%; height: 100.0%;">casualty_death — Khyber Pakhtunkhwa</div>`)[0];
+                popup_e6e1edf0709e38e3eab5d1a5130dcec0.setContent(html_e1d9a583fd263ca46bd60c1a8da71ee5);
+            
+        
+
+        regular_polygon_marker_74a3320cdcc0291e3a8ff33d20f44e53.bindPopup(popup_e6e1edf0709e38e3eab5d1a5130dcec0)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_977d05955fbd7894534a0683c91304f1 = new L.RegularPolygonMarker(
+                [32.9297732, 70.6692655],
+                {
+  "stroke": true,
+  "color": "#ffd93b",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#ffd93b",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 3,
+  "rotation": 30,
+}
+            ).addTo(feature_group_2d37a6f72c809a8aef93f2265b11107d);
+        
+    
+        var popup_15c179c22ddf4b92b5afa4a4ea894440 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a656ef8fe41399f2f7372b2544c071f6 = $(`<div id="html_a656ef8fe41399f2f7372b2544c071f6" style="width: 100.0%; height: 100.0%;">casualty_death — Mohabbat Khel</div>`)[0];
+                popup_15c179c22ddf4b92b5afa4a4ea894440.setContent(html_a656ef8fe41399f2f7372b2544c071f6);
+            
+        
+
+        regular_polygon_marker_977d05955fbd7894534a0683c91304f1.bindPopup(popup_15c179c22ddf4b92b5afa4a4ea894440)
+        ;
+
+        
+    
+    
+            feature_group_2d37a6f72c809a8aef93f2265b11107d.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_a3c57e2a2c4013af16faa4e6ccf95438 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var regular_polygon_marker_da5be3e726740281e7b803f6d38a3640 = new L.RegularPolygonMarker(
+                [22.3193039, 114.1693611],
+                {
+  "stroke": true,
+  "color": "#ffd93b",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#ffd93b",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 3,
+  "rotation": 30,
+}
+            ).addTo(feature_group_a3c57e2a2c4013af16faa4e6ccf95438);
+        
+    
+        var popup_f57dce5ba7c855675fe0bf7879896eae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3d9a027b09fc066e6342a39c01a24b1c = $(`<div id="html_3d9a027b09fc066e6342a39c01a24b1c" style="width: 100.0%; height: 100.0%;">disaster — Hong Kong</div>`)[0];
+                popup_f57dce5ba7c855675fe0bf7879896eae.setContent(html_3d9a027b09fc066e6342a39c01a24b1c);
+            
+        
+
+        regular_polygon_marker_da5be3e726740281e7b803f6d38a3640.bindPopup(popup_f57dce5ba7c855675fe0bf7879896eae)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_1273d2abd9522e471d275deb673e02fa = new L.RegularPolygonMarker(
+                [35.86166, 104.195397],
+                {
+  "stroke": true,
+  "color": "#ffd93b",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#ffd93b",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 3,
+  "rotation": 30,
+}
+            ).addTo(feature_group_a3c57e2a2c4013af16faa4e6ccf95438);
+        
+    
+        var popup_3c753bfb5042aad032f2783e35e49c3d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5ad9a877394b7116a3a609f1a96fc206 = $(`<div id="html_5ad9a877394b7116a3a609f1a96fc206" style="width: 100.0%; height: 100.0%;">disaster — southwest China</div>`)[0];
+                popup_3c753bfb5042aad032f2783e35e49c3d.setContent(html_5ad9a877394b7116a3a609f1a96fc206);
+            
+        
+
+        regular_polygon_marker_1273d2abd9522e471d275deb673e02fa.bindPopup(popup_3c753bfb5042aad032f2783e35e49c3d)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_60bef4876ee614c057998b9c93078d4c = new L.RegularPolygonMarker(
+                [22.3193039, 114.1693611],
+                {
+  "stroke": true,
+  "color": "#ffd93b",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#ffd93b",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 3,
+  "rotation": 30,
+}
+            ).addTo(feature_group_a3c57e2a2c4013af16faa4e6ccf95438);
+        
+    
+        var popup_50597bf0570e0b783826231440b7a899 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bcd5a80b3c37ddaab152009cc5c7e797 = $(`<div id="html_bcd5a80b3c37ddaab152009cc5c7e797" style="width: 100.0%; height: 100.0%;">disaster — Hong Kong</div>`)[0];
+                popup_50597bf0570e0b783826231440b7a899.setContent(html_bcd5a80b3c37ddaab152009cc5c7e797);
+            
+        
+
+        regular_polygon_marker_60bef4876ee614c057998b9c93078d4c.bindPopup(popup_50597bf0570e0b783826231440b7a899)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_481572ad27590d94049ca56d81472ecc = new L.RegularPolygonMarker(
+                [7.873053999999999, 80.77179699999999],
+                {
+  "stroke": true,
+  "color": "#ffd93b",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#ffd93b",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 3,
+  "rotation": 30,
+}
+            ).addTo(feature_group_a3c57e2a2c4013af16faa4e6ccf95438);
+        
+    
+        var popup_ca09aca83ab211958ce62557fa0d4902 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d69063582b43f6e3ae243edcfb6f9387 = $(`<div id="html_d69063582b43f6e3ae243edcfb6f9387" style="width: 100.0%; height: 100.0%;">disaster — Sri Lanka</div>`)[0];
+                popup_ca09aca83ab211958ce62557fa0d4902.setContent(html_d69063582b43f6e3ae243edcfb6f9387);
+            
+        
+
+        regular_polygon_marker_481572ad27590d94049ca56d81472ecc.bindPopup(popup_ca09aca83ab211958ce62557fa0d4902)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_0fa1ef4cb6d0ceb39a282c7e2e17f6e9 = new L.RegularPolygonMarker(
+                [22.3193039, 114.1693611],
+                {
+  "stroke": true,
+  "color": "#ffd93b",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#ffd93b",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 3,
+  "rotation": 30,
+}
+            ).addTo(feature_group_a3c57e2a2c4013af16faa4e6ccf95438);
+        
+    
+        var popup_13aa5cea9307a28f7a94745c2977b0a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af44dde1e6981d4657bd35a1cee74788 = $(`<div id="html_af44dde1e6981d4657bd35a1cee74788" style="width: 100.0%; height: 100.0%;">disaster — Hong Kong</div>`)[0];
+                popup_13aa5cea9307a28f7a94745c2977b0a7.setContent(html_af44dde1e6981d4657bd35a1cee74788);
+            
+        
+
+        regular_polygon_marker_0fa1ef4cb6d0ceb39a282c7e2e17f6e9.bindPopup(popup_13aa5cea9307a28f7a94745c2977b0a7)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_c24bf298374301b42cec907869eec6b0 = new L.RegularPolygonMarker(
+                [23.804093, 90.4152376],
+                {
+  "stroke": true,
+  "color": "#ffd93b",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#ffd93b",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 3,
+  "rotation": 30,
+}
+            ).addTo(feature_group_a3c57e2a2c4013af16faa4e6ccf95438);
+        
+    
+        var popup_6c9b6849bee8970b4806457f63d1707a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8675064b808beafd626c9c4a4abd8e80 = $(`<div id="html_8675064b808beafd626c9c4a4abd8e80" style="width: 100.0%; height: 100.0%;">disaster — Dhaka, Bangladesh</div>`)[0];
+                popup_6c9b6849bee8970b4806457f63d1707a.setContent(html_8675064b808beafd626c9c4a4abd8e80);
+            
+        
+
+        regular_polygon_marker_c24bf298374301b42cec907869eec6b0.bindPopup(popup_6c9b6849bee8970b4806457f63d1707a)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_091129e7566ec895120deaeaa2596a28 = new L.RegularPolygonMarker(
+                [22.4423282, 114.165521],
+                {
+  "stroke": true,
+  "color": "#ffd93b",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#ffd93b",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 3,
+  "rotation": 30,
+}
+            ).addTo(feature_group_a3c57e2a2c4013af16faa4e6ccf95438);
+        
+    
+        var popup_581da77719049ca337f261fb8b6eb86e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec4ed0ced2269f2ca203db91be95c3c7 = $(`<div id="html_ec4ed0ced2269f2ca203db91be95c3c7" style="width: 100.0%; height: 100.0%;">disaster — Tai Po district, Hong Kong</div>`)[0];
+                popup_581da77719049ca337f261fb8b6eb86e.setContent(html_ec4ed0ced2269f2ca203db91be95c3c7);
+            
+        
+
+        regular_polygon_marker_091129e7566ec895120deaeaa2596a28.bindPopup(popup_581da77719049ca337f261fb8b6eb86e)
+        ;
+
+        
+    
+    
+            feature_group_a3c57e2a2c4013af16faa4e6ccf95438.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_9640dd6e55e24e3b327a5cf9ef867a3d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_7e05de8c12327dfb351afa6103434ff2 = L.circleMarker(
+                [32.9909945, 70.645473],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9640dd6e55e24e3b327a5cf9ef867a3d);
+        
+    
+        var popup_a5a51330effbfc2c81ffa742e90889e2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4bbadbef8341c2e42bb4273aea57698 = $(`<div id="html_a4bbadbef8341c2e42bb4273aea57698" style="width: 100.0%; height: 100.0%;">drone_strike — Bannu, Khyber Pakhtunkhwa</div>`)[0];
+                popup_a5a51330effbfc2c81ffa742e90889e2.setContent(html_a4bbadbef8341c2e42bb4273aea57698);
+            
+        
+
+        circle_marker_7e05de8c12327dfb351afa6103434ff2.bindPopup(popup_a5a51330effbfc2c81ffa742e90889e2)
+        ;
+
+        
+    
+    
+            var circle_marker_f15eecac12f2cfc725c39d3ec56c244b = L.circleMarker(
+                [38.861034, 71.276093],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9640dd6e55e24e3b327a5cf9ef867a3d);
+        
+    
+        var popup_461bdf11f7bd6939c564f88ff3512345 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_856e11c473e23e943f1413368fc2d9f7 = $(`<div id="html_856e11c473e23e943f1413368fc2d9f7" style="width: 100.0%; height: 100.0%;">drone_strike — Tajikistan</div>`)[0];
+                popup_461bdf11f7bd6939c564f88ff3512345.setContent(html_856e11c473e23e943f1413368fc2d9f7);
+            
+        
+
+        circle_marker_f15eecac12f2cfc725c39d3ec56c244b.bindPopup(popup_461bdf11f7bd6939c564f88ff3512345)
+        ;
+
+        
+    
+    
+            var circle_marker_e01da61feb5328381602ee934f163590 = L.circleMarker(
+                [34.105365, 71.15516269999999],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9640dd6e55e24e3b327a5cf9ef867a3d);
+        
+    
+        var popup_b2710d3daad4f39ae802518f34bb0109 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_edb69a906380ccd97e3b73ac0a45caac = $(`<div id="html_edb69a906380ccd97e3b73ac0a45caac" style="width: 100.0%; height: 100.0%;">drone_strike — Jabar Mela, Khyber District, Khyber Pakhtunkhwa</div>`)[0];
+                popup_b2710d3daad4f39ae802518f34bb0109.setContent(html_edb69a906380ccd97e3b73ac0a45caac);
+            
+        
+
+        circle_marker_e01da61feb5328381602ee934f163590.bindPopup(popup_b2710d3daad4f39ae802518f34bb0109)
+        ;
+
+        
+    
+    
+            var circle_marker_569b9d9e58dd4b827097dc77157a4a47 = L.circleMarker(
+                [38.861034, 71.276093],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_9640dd6e55e24e3b327a5cf9ef867a3d);
+        
+    
+        var popup_9a1887f20e432c36dac1c3bba189ddb2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a27ce954a5f219c7feb1bfbdac222734 = $(`<div id="html_a27ce954a5f219c7feb1bfbdac222734" style="width: 100.0%; height: 100.0%;">drone_strike — Tajikistan</div>`)[0];
+                popup_9a1887f20e432c36dac1c3bba189ddb2.setContent(html_a27ce954a5f219c7feb1bfbdac222734);
+            
+        
+
+        circle_marker_569b9d9e58dd4b827097dc77157a4a47.bindPopup(popup_9a1887f20e432c36dac1c3bba189ddb2)
+        ;
+
+        
+    
+    
+            feature_group_9640dd6e55e24e3b327a5cf9ef867a3d.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_1dc06b8ab061d37f48ab8c39e768ede2 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_6726fbf1fe3295d1d2ab5fc620b43b91 = L.circleMarker(
+                [22.5474364, 85.8025373],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1dc06b8ab061d37f48ab8c39e768ede2);
+        
+    
+        var popup_25deffefaaedfd577540a91ce651c2e5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ef1da9708a99db75ba22c103297593e2 = $(`<div id="html_ef1da9708a99db75ba22c103297593e2" style="width: 100.0%; height: 100.0%;">explosion — Chaibasa, Jharkhand</div>`)[0];
+                popup_25deffefaaedfd577540a91ce651c2e5.setContent(html_ef1da9708a99db75ba22c103297593e2);
+            
+        
+
+        circle_marker_6726fbf1fe3295d1d2ab5fc620b43b91.bindPopup(popup_25deffefaaedfd577540a91ce651c2e5)
+        ;
+
+        
+    
+    
+            var circle_marker_b77216b8932c7d709e5452f80664f91f = L.circleMarker(
+                [32.2982314, 69.59762400000001],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_1dc06b8ab061d37f48ab8c39e768ede2);
+        
+    
+        var popup_c00aba5af8af172be7fa90eea46ae903 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e88a32e296f98de5afbc964a66a936eb = $(`<div id="html_e88a32e296f98de5afbc964a66a936eb" style="width: 100.0%; height: 100.0%;">explosion — Wana, South Waziristan</div>`)[0];
+                popup_c00aba5af8af172be7fa90eea46ae903.setContent(html_e88a32e296f98de5afbc964a66a936eb);
+            
+        
+
+        circle_marker_b77216b8932c7d709e5452f80664f91f.bindPopup(popup_c00aba5af8af172be7fa90eea46ae903)
+        ;
+
+        
+    
+    
+            feature_group_1dc06b8ab061d37f48ab8c39e768ede2.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_b57e0bbc473db7fbbfca6d8a3563a383 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var regular_polygon_marker_3d8d9bed97026a77f808c0a30245ae1c = new L.RegularPolygonMarker(
+                [9.081999, 8.675277],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_b57e0bbc473db7fbbfca6d8a3563a383);
+        
+    
+        var popup_9ebaddb270f6dafa26b890befed5f1bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f52ddc0beddde864beb431df40e26eb0 = $(`<div id="html_f52ddc0beddde864beb431df40e26eb0" style="width: 100.0%; height: 100.0%;">kidnapping — Nigeria</div>`)[0];
+                popup_9ebaddb270f6dafa26b890befed5f1bd.setContent(html_f52ddc0beddde864beb431df40e26eb0);
+            
+        
+
+        regular_polygon_marker_3d8d9bed97026a77f808c0a30245ae1c.bindPopup(popup_9ebaddb270f6dafa26b890befed5f1bd)
+        ;
+
+        
+    
+    
+            feature_group_b57e0bbc473db7fbbfca6d8a3563a383.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_b29222454f8e30422aa1909e8c89bbee = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var regular_polygon_marker_2963b5c8b3f11b294d213e3885e1711c = new L.RegularPolygonMarker(
+                [34.1515173, 71.5723953],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_b29222454f8e30422aa1909e8c89bbee);
+        
+    
+        var popup_3d2866657f269ce0195a32fb43f4afe0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_399396668295829b3c2dba9ce5b6d9f7 = $(`<div id="html_399396668295829b3c2dba9ce5b6d9f7" style="width: 100.0%; height: 100.0%;">movement — Khyber Pakhtunkhwa</div>`)[0];
+                popup_3d2866657f269ce0195a32fb43f4afe0.setContent(html_399396668295829b3c2dba9ce5b6d9f7);
+            
+        
+
+        regular_polygon_marker_2963b5c8b3f11b294d213e3885e1711c.bindPopup(popup_3d2866657f269ce0195a32fb43f4afe0)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_3472a8b73a404de89a80c374b5a6b84a = new L.RegularPolygonMarker(
+                [11.803749, -15.180413],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_b29222454f8e30422aa1909e8c89bbee);
+        
+    
+        var popup_6ed2870088d4a5a9e4909b70ae08d03f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8171007910b34fc99dc1010af6d01d31 = $(`<div id="html_8171007910b34fc99dc1010af6d01d31" style="width: 100.0%; height: 100.0%;">movement — Guinea-Bissau</div>`)[0];
+                popup_6ed2870088d4a5a9e4909b70ae08d03f.setContent(html_8171007910b34fc99dc1010af6d01d31);
+            
+        
+
+        regular_polygon_marker_3472a8b73a404de89a80c374b5a6b84a.bindPopup(popup_6ed2870088d4a5a9e4909b70ae08d03f)
+        ;
+
+        
+    
+    
+            feature_group_b29222454f8e30422aa1909e8c89bbee.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_0e1c5897d4b99f64f362042955cc569d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var regular_polygon_marker_03184df8022130c31acbbb5cf1f19630 = new L.RegularPolygonMarker(
+                [32.8102439, 75.5487769],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_0e1c5897d4b99f64f362042955cc569d);
+        
+    
+        var popup_ac673d67f73a044c6b22e729d38eac87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54f0fc334c11feeba9f821a01c2b49e1 = $(`<div id="html_54f0fc334c11feeba9f821a01c2b49e1" style="width: 100.0%; height: 100.0%;">raid_search — Basantgarh, Udhampur</div>`)[0];
+                popup_ac673d67f73a044c6b22e729d38eac87.setContent(html_54f0fc334c11feeba9f821a01c2b49e1);
+            
+        
+
+        regular_polygon_marker_03184df8022130c31acbbb5cf1f19630.bindPopup(popup_ac673d67f73a044c6b22e729d38eac87)
+        ;
+
+        
+    
+    
+            var regular_polygon_marker_69e874bf08a1bdff6e238ded6d2e7722 = new L.RegularPolygonMarker(
+                [33.6449908, 75.018031],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_0e1c5897d4b99f64f362042955cc569d);
+        
+    
+        var popup_b88cc6aa0e73200cd2801945670c39ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c1ad966573a6b7bb23eaec1a27456ffd = $(`<div id="html_c1ad966573a6b7bb23eaec1a27456ffd" style="width: 100.0%; height: 100.0%;">raid_search — Kulgam, Jammu & Kashmir</div>`)[0];
+                popup_b88cc6aa0e73200cd2801945670c39ff.setContent(html_c1ad966573a6b7bb23eaec1a27456ffd);
+            
+        
+
+        regular_polygon_marker_69e874bf08a1bdff6e238ded6d2e7722.bindPopup(popup_b88cc6aa0e73200cd2801945670c39ff)
+        ;
+
+        
+    
+    
+            feature_group_0e1c5897d4b99f64f362042955cc569d.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_648c0fe1e59d7f92321a4551b05e5dbf = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_b50429b032191788d945306ad56203d4 = L.circleMarker(
+                [32.9565575, 70.532443],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff6b6b", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_648c0fe1e59d7f92321a4551b05e5dbf);
+        
+    
+        var popup_8ea394dd1319382ecabee8d60d3c815d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7aa775d57cad3bedd6a93ebeb0b08734 = $(`<div id="html_7aa775d57cad3bedd6a93ebeb0b08734" style="width: 100.0%; height: 100.0%;">shelling — Janikhel, Baka Khel subdivision</div>`)[0];
+                popup_8ea394dd1319382ecabee8d60d3c815d.setContent(html_7aa775d57cad3bedd6a93ebeb0b08734);
+            
+        
+
+        circle_marker_b50429b032191788d945306ad56203d4.bindPopup(popup_8ea394dd1319382ecabee8d60d3c815d)
+        ;
+
+        
+    
+    
+            feature_group_648c0fe1e59d7f92321a4551b05e5dbf.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_a6668b6617cffd8daca047f0e2ed70d3 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var regular_polygon_marker_68a728ca2b4dac860af4d3fca92ef8a1 = new L.RegularPolygonMarker(
+                [24.4672132, 39.6024496],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_a6668b6617cffd8daca047f0e2ed70d3);
+        
+    
+        var popup_a34f71ace79ffce46dbc845e62c5313e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f334e84206c4a918968acbe70b45afa = $(`<div id="html_1f334e84206c4a918968acbe70b45afa" style="width: 100.0%; height: 100.0%;">smuggling — Medinah, Saudi Arabia</div>`)[0];
+                popup_a34f71ace79ffce46dbc845e62c5313e.setContent(html_1f334e84206c4a918968acbe70b45afa);
+            
+        
+
+        regular_polygon_marker_68a728ca2b4dac860af4d3fca92ef8a1.bindPopup(popup_a34f71ace79ffce46dbc845e62c5313e)
+        ;
+
+        
+    
+    
+            feature_group_a6668b6617cffd8daca047f0e2ed70d3.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var feature_group_9368c6b3300853ff8ec3382c3f169b92 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var regular_polygon_marker_546601d119ea5045e4444509a10ddc92 = new L.RegularPolygonMarker(
+                [33.9350706, 75.0603932],
+                {
+  "stroke": true,
+  "color": "#4cc9f0",
+  "weight": 1.5,
+  "opacity": 1.0,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#4cc9f0",
+  "fillOpacity": 0.9,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "radius": 7,
+  "numberOfSides": 4,
+  "rotation": 0,
+}
+            ).addTo(feature_group_9368c6b3300853ff8ec3382c3f169b92);
+        
+    
+        var popup_48fdd9666da175d888c801d1ffd1255b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1f8fe8f4ec7e98518aff01873f44374d = $(`<div id="html_1f8fe8f4ec7e98518aff01873f44374d" style="width: 100.0%; height: 100.0%;">weapons_seizure — Naner Midoora, Tral, Kashmir</div>`)[0];
+                popup_48fdd9666da175d888c801d1ffd1255b.setContent(html_1f8fe8f4ec7e98518aff01873f44374d);
+            
+        
+
+        regular_polygon_marker_546601d119ea5045e4444509a10ddc92.bindPopup(popup_48fdd9666da175d888c801d1ffd1255b)
+        ;
+
+        
+    
+    
+            feature_group_9368c6b3300853ff8ec3382c3f169b92.addTo(map_fabc1f16c5b13b4958382a75be529664);
+        
+    
+            var layer_control_aa31b5e0e82d5a2394d43729a0c5c47b_layers = {
+                base_layers : {
+                    "cartodbdarkmatter" : tile_layer_c85d2092cf39d77838d4a2d166a2afce,
+                },
+                overlays :  {
+                    "arrest_detention" : feature_group_d9c14856ef9cf93272a7ad44135ccf1e,
+                    "attack" : feature_group_c5b192747ecb10385939c5b86d87257d,
+                    "casualty_death" : feature_group_2d37a6f72c809a8aef93f2265b11107d,
+                    "disaster" : feature_group_a3c57e2a2c4013af16faa4e6ccf95438,
+                    "drone_strike" : feature_group_9640dd6e55e24e3b327a5cf9ef867a3d,
+                    "explosion" : feature_group_1dc06b8ab061d37f48ab8c39e768ede2,
+                    "kidnapping" : feature_group_b57e0bbc473db7fbbfca6d8a3563a383,
+                    "movement" : feature_group_b29222454f8e30422aa1909e8c89bbee,
+                    "raid_search" : feature_group_0e1c5897d4b99f64f362042955cc569d,
+                    "shelling" : feature_group_648c0fe1e59d7f92321a4551b05e5dbf,
+                    "smuggling" : feature_group_a6668b6617cffd8daca047f0e2ed70d3,
+                    "weapons_seizure" : feature_group_9368c6b3300853ff8ec3382c3f169b92,
+                },
+            };
+            let layer_control_aa31b5e0e82d5a2394d43729a0c5c47b = L.control.layers(
+                layer_control_aa31b5e0e82d5a2394d43729a0c5c47b_layers.base_layers,
+                layer_control_aa31b5e0e82d5a2394d43729a0c5c47b_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_fabc1f16c5b13b4958382a75be529664);
+
+        
+</script>
+</html>

@@ -1,7 +1,27 @@
 # Telegram-OSINT-Incident-Mapping
 
-NOTE:
-The project requires a pyrogram session login for Agent 1. 
+### IMPORTANT NOTE:
+
+This project fetches messages using **Pyrogram (MTProto)**. To run the live pipeline you **must** provide your own Telegram API credentials and log in with *your* Telegram account.
+
+1. Create Telegram API credentials at https://my.telegram.org → API development tools  
+   - You will get **API_ID** and **API_HASH** used in the project
+     
+2. When you run the Pyrogram client for the first time it will prompt you for your phone number and a login code sent by Telegram. This authenticates *your* account locally and creates a session file on your computer.
+
+3. This project reads messages from specific OSINT Telegram channels. To reproduce the live fetch you must **join the same channels** in your Telegram account (Or change the channels list in the code and add your preferred OSINT channels):
+
+Channels used:
+- @OsintTV (chat id: -1001554189930)
+- @WarAndGore (chat id: -1001964457167)
+- @ElitePredators (chat id: -1001150168882)
+- @ResonantNews (chat id: -1001407087072)
+
+API Requirements:
+1. Telegram API ID
+2. Telegram API Hash
+3. Gemini API Key
+4. Google Maps API Key  
 
 ### Problem Statement
 

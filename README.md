@@ -92,6 +92,7 @@ Finally, one meta-agent:
 - Compiles the incident context
 - Writes a polished, concise intelligence summary
 
+Note:- Since the folium interactive map sometimes does not load inside the notebook environment, an example final interactive map is added to the repo. Download and check index.html
 
 ### The Build
 

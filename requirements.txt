@@ -4,8 +4,7 @@ python-dotenv
 googlemaps
 google-adk
 pandas
-geopandas
-contextily
 folium
 shapely
 matplotlib
+streamlit
